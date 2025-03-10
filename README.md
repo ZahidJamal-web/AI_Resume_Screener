@@ -1,4 +1,4 @@
-<h2><b>AI Resume Screener</b> 🎯</h2>h2>
+<h2><b>AI Resume Screener</b> 🎯</h2>
 <br><br>
 <b>A Powerful AI-Based Resume Screening System with NLP & Gemini API Integration</b>
 &nbsp &nbsp &nbsp &nbsp🚀 AI Resume Screener is an advanced web-based application designed to automate and enhance the resume screening process. This system utilizes Natural Language Processing (NLP) and Google's Gemini AI to extract key information, analyze resumes, and provide structured insights, making it easier for recruiters to identify the best candidates efficiently.
