@@ -14,3 +14,24 @@
 ✅ Database Support – Compatible with SQLite, MySQL, or PostgreSQL.<br>
 ✅ Scalable & Extensible – Built with Django, allowing easy customization and scalability.
 
+<br><br>
+
+<h2><b>🛠️ Tech Stack</b></h2><br>
+
+| Technology         | Purpose                          |
+|-------------------|--------------------------------|
+| **Python (Django)** | Backend Framework              |
+| **HTML, CSS, JavaScript** | Frontend Development       |
+| **Bootstrap/Tailwind** | UI Styling                   |
+| **SQLite/MySQL/PostgreSQL** | Database Support        |
+| **NLTK & Scikit-Learn** | NLP Processing             |
+| **Google Gemini API** | AI Resume Analysis          |
+| **Git & GitHub** | Version Control                  |
+
+<br><br>
+
+📊 How It Works<br>
+1. User Registration & Approval – Recruiters register and must be approved by an admin.<br>
+2. Resume Upload – Users upload resumes in PDF/DOCX format.<br>
+3. AI-Based Processing – The system extracts, analyzes, and scores resumes using NLP & Gemini API.<br>
+4. Dashboard View – Recruiters can filter, search, and view detailed resume insights.<br>
