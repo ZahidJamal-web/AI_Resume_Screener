@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block main_content %}{% endblock %}  <!-- Remove Main Content -->
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3 text-center">Resume Analysis</h2>
+    <div class="card shadow-lg p-4">
+            {% if resume.score %}
+                <p><strong>AI Match Score:</strong>
+                    <span class="badge bg-success">{{ resume.score }}%</span>
+                </p>
+            {% endif %}
+
+        <!-- Strengths Section -->
+        {% if resume_details.strengths %}
+        <div class="mt-4">
+            <h4 class="text-success">✔ Strengths:</h4>
+            <ul>
+                {% for strength in resume_details.strengths %}
+                    <li>{{ strength }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <!-- Weaknesses Section -->
+        {% if resume_details.weaknesses %}
+        <div class="mt-4">
+            <h4 class="text-danger">✖ Weaknesses:</h4>
+            <ul>
+                {% for weakness in resume_details.weaknesses %}
+                    <li>{{ weakness }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <!-- Suggestions Section -->
+        {% if resume_details.suggestions %}
+        <div class="mt-4">
+            <h4 class="text-warning">⚡ Suggested Improvements:</h4>
+            <ul>
+                {% for suggestion in resume_details.suggestions %}
+                    <li>{{ suggestion }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        <br>
+        <div class="d-flex justify-content-between mt-4">
+            <a href="{{ resume.filepath.url }}" class="btn btn-success" download>Download Resume</a>
+            <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+    {% endblock %}

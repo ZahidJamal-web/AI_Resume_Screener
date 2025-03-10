@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<!-- Your Main Content Section -->
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3 text-center">Dashboard</h2>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>File Name</th>
+                <th>Resume Score</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for resume in resumes %}
+                <tr>
+                    <td>{{ resume.filename }}</td>
+                    <td>{{ resume.score }}%</td> <!-- Display the score for each resume -->
+                    <td>
+                        <a href="{% url 'view_resume' resume.id %}" class="btn btn-info btn-sm">View</a>
+                        <form action="{% url 'delete_resume' resume.id %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this resume?');">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3" class="text-center">No resumes uploaded yet.</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

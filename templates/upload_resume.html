@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block main_content %}{% endblock %}  <!-- Remove Main Content -->
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3 text-center">Upload Resume</h2>
+    <div class="card shadow-lg p-4">
+        <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label fw-bold">Upload Resume (PDF/DOCX)</label>
+                <input type="file" class="form-control" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Job Description (Optional)</label>
+                <textarea name="job_description" class="form-control" rows="4" placeholder="Paste job description here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Upload & Analyze</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
